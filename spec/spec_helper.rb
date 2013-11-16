@@ -19,9 +19,17 @@ RSpec.configure do |config|
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
   #
   # config.mock_with :mocha
-  # config.mock_with :flexmock
-  # config.mock_with :rr
+   config.before(:suite) do
+    DatabaseCleaner.strategy = :truncation  # config.mock_with :flexmock
+   end # config.mock_with :rr
 
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

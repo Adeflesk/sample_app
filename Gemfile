@@ -4,6 +4,7 @@ ruby '2.0.0'
 gem 'rails', '4.0.1'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'pg', '0.15.1'
+gem 'bcrypt-ruby', '3.1.2'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -12,10 +13,12 @@ group :development, :test do
   gem 'spork-rails','4.0.0'
   gem 'guard-spork', '1.5.0'
   gem 'childprocess','0.3.6'
+  gem 'database_cleaner'
 end
 group :test do
   gem 'selenium-webdriver','2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'launchy'
 end
 
 # Use SCSS for stylesheets
