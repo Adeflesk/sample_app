@@ -14,12 +14,11 @@ group :development, :test do
   gem 'guard-spork', '1.5.0'
   gem 'childprocess','0.3.6'
   gem 'database_cleaner'
+  gem 'factory_girl_rails', '4.2.1'
 end
 group :test do
   gem 'selenium-webdriver','2.35.1'
   gem 'capybara', '2.1.0'
-  gem 'launchy'
-  gem 'factory_girl_rails', '4.2.1'
 end
 
 # Use SCSS for stylesheets
